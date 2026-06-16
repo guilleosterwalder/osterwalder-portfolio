@@ -1,0 +1,53 @@
+<section class="experience-section">
+
+  <h2>
+    {{ settings.translations().experience.title }}
+  </h2>
+
+  <div class="experience-list">
+
+    @for (experience of experiences; track experience.company) {
+
+      <div class="experience-card">
+
+        <div class="experience-header">
+
+          <div>
+            <h3>
+              {{ experience.company }}
+            </h3>
+
+            <h4>
+              {{ experience.role }}
+            </h4>
+          </div>
+
+          <span class="experience-period">
+            {{ experience.period }}
+          </span>
+
+        </div>
+
+        <p class="experience-summary">
+          {{ experience.summary }}
+        </p>
+
+        <div class="experience-technologies">
+
+          @for (technology of experience.technologies; track technology) {
+
+            <span class="technology-badge">
+              {{ technology }}
+            </span>
+
+          }
+
+        </div>
+
+      </div>
+
+    }
+
+  </div>
+
+</section>

@@ -1,1 +1,73 @@
-<p>home works!</p>
+<section class="hero">
+
+  <div class="hero-content">
+
+    <h1>Guillermo Osterwalder</h1>
+
+    <h2>
+      Frontend Developer
+    </h2>
+
+    <p>
+        {{ settings.translations().hero.summary }}
+    </p>
+
+    <div class="hero-actions">
+
+        <div class="hero-actions">
+
+          <a
+            class="btn btn-primary"
+            href="/GuillermoOsterwalder-CV.pdf"
+            download
+          >
+            <span class="material-icons">
+              download
+            </span>
+            {{ settings.translations().hero.downloadCv }}
+          </a>
+      
+          <a
+            class="btn btn-secondary"
+            href="https://github.com/guilleosterwalder/osterwalder-portfolio"
+            target="_blank"
+          >
+            <span class="material-icons">
+              code
+            </span>
+            GitHub
+          </a>
+      
+          <a
+            class="btn btn-secondary"
+            href="https://www.linkedin.com/in/guillermo-osterwalder-4a5572185/"
+            target="_blank"
+          >
+            <span class="material-icons">
+              work
+            </span>
+            LinkedIn
+          </a>
+      
+        </div>
+
+    </div>
+
+    <div class="hero-skills">
+  
+        @for (skill of skills; track skill) {
+          <span class="skill-badge">
+            {{ skill }}
+          </span>
+        }
+        
+    </div>
+
+    <app-technical-profile />
+    <app-experience-timeline />
+
+
+  </div>
+
+
+</section>

@@ -1,0 +1,35 @@
+<section class="technical-profile">
+
+  <h2>
+    Technical Profile
+  </h2>
+
+  <div class="categories-grid">
+
+    @for (category of categories; track category.title) {
+
+      <div class="category-card">
+
+        <h3>
+          {{ category.title }}
+        </h3>
+
+        <ul>
+
+          @for (item of category.items; track item) {
+
+            <li>
+              {{ item }}
+            </li>
+
+          }
+
+        </ul>
+
+      </div>
+
+    }
+
+  </div>
+
+</section>

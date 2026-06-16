@@ -21,5 +21,18 @@ export const en = {
   chat: {
     isTyping: "Guillermo AI is typing...",
     online: "Online"
+  },
+  hero: {
+  title: 'Senior Frontend Developer',
+  subtitle: 'Frontend Lead',
+  summary: '8+ years of experience building enterprise applications across healthcare, IoT, e-commerce, insurance and logistics industries. Experienced leading frontend teams, defining technical architectures and delivering complex user-facing products using Angular, TypeScript and modern web technologies.',
+  downloadCv: 'Download CV',
+  },
+  technicalProfile: {
+    title: 'Technical Profile'
+  },
+  experience: {
+    title: "Experience"
   }
+
 };

@@ -1,0 +1,69 @@
+.technical-profile {
+  padding: 4rem 2rem;
+  margin-top: 4rem;
+}
+
+.technical-profile h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.category-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color:
+    color-mix(
+      in srgb,
+      var(--primary-color) 5%,
+      white 95%
+    );
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+.category-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.category-card ul {
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.category-card li {
+  margin-bottom: 0.4rem;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-item {
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background-color:
+    color-mix(
+      in srgb,
+      var(--primary-color) 15%,
+      white 85%
+    );
+  color: var(--primary-color);
+  font-size: 0.9rem;
+}

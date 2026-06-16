@@ -47,7 +47,14 @@ export class ChatAssistant {
     this.isTyping.set(true);
 
   try {
-    const response = await this.AiService.ask(message);
+    const history = this.messages();
+    
+    const response = 
+      await this.AiService.ask(
+        history,
+        message
+      );
+
 
     this.messages.update(messages => [
       ...messages,

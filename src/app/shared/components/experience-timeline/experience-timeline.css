@@ -1,0 +1,84 @@
+.experience-section {
+  padding: 4rem 2rem;
+}
+
+.experience-section h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.experience-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color:
+    color-mix(
+      in srgb,
+      var(--primary-color) 5%,
+      white 95%
+    );
+  border: 1px solid
+    color-mix(
+      in srgb,
+      var(--primary-color) 20%,
+      transparent
+    );
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.experience-header {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.experience-header h3 {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.experience-header h4 {
+  margin: 0.25rem 0 0;
+  font-weight: 500;
+}
+
+.experience-period {
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.experience-summary {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.experience-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.technology-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background-color:
+    color-mix(
+      in srgb,
+      var(--primary-color) 15%,
+      white 85%
+    );
+  color: var(--primary-color);
+  font-size: 0.9rem;
+}
