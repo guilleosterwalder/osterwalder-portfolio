@@ -9,7 +9,7 @@ export type Language = 'es' | 'en';
   providedIn: 'root',
 })
 export class SettingsService {
-  readonly language = signal<Language>('es');
+  readonly language = signal<Language>('en');
 
   readonly primaryColor = signal('#6750A4');
   readonly secondaryColor = signal('#c0b8cc');

@@ -1,0 +1,58 @@
+<button
+  class="chat-launcher"
+  (click)="toggleChat()"
+>
+  💬 Ask Guillermo AI
+</button>
+
+@if (isOpen()) {
+  <div class="chat-popup" cdkDrag>
+    <div class="chat-header" cdkDragHandle>
+      <div class="chat-title">
+          <span class="online-dot"></span>            
+          <div>Guillermo AI</div>
+          <small>{{ settings.translations().chat.online }}</small>
+        </div>
+
+      <button class="chat-close" (click)="toggleChat()">
+        ✕
+      </button>
+    </div>
+
+    <div class="chat-body" #chatBody>
+      @for (message of messages(); track $index) {
+
+        <div
+          class="message"
+          [class.user]="message.sender === 'user'"
+          [class.assistant]="message.sender === 'assistant'"
+        >
+          {{ message.text }}
+        </div>
+
+      }
+      @if (isTyping()) {
+        <div class="typing-indicator">
+          {{ settings.translations().chat.isTyping }}
+        </div>
+      }
+    </div>
+    
+    <div class="chat-input">
+
+      <input
+        type="text"
+        [value]="currentMessage()"
+        [disabled]="isTyping()"
+        (input)="currentMessage.set($any($event.target).value)"
+        (keyup.enter)="sendMessage()"
+        placeholder="Ask Guillermo AI..."
+      />
+
+      <button (click)="sendMessage()" class="chat-send">
+        ➤
+      </button>
+
+    </div>
+  </div>
+}

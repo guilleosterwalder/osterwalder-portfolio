@@ -17,5 +17,9 @@ export const es = {
     primaryColor: 'Color primario',
     secondaryColor: 'Color secundario',
     backgroundColor: 'Color de fondo'
+  },
+  chat: {
+    isTyping: "Guillermo AI esta escribiendo...",
+    online: "Conectado"
   }
 };
