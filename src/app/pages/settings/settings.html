@@ -1,0 +1,87 @@
+<section class="settings-container">
+  <h1 class="settings-title">
+    {{ settings.translations().settings.title }}
+  </h1>
+
+  <div class="settings-section">
+    <h2 class="settings-subtitle">
+      {{ settings.translations().settings.language }}
+    </h2>
+
+    <p>
+      {{ settings.translations().settings.languageDescription }}
+    </p>
+
+    <div class="language-buttons">
+      <button
+        (click)="settings.language.set('es')"
+      >
+        Español
+      </button>
+
+      <button
+        (click)="settings.language.set('en')"
+      >
+        English
+      </button>
+    </div>
+  </div>
+
+  <div class="settings-section">
+    <h2 class="settings-subtitle">
+      {{ settings.translations().settings.theme }}
+    </h2>
+
+    <p>
+      {{ settings.translations().settings.themeDescription }}
+    </p>
+
+    <div class="color-setting">
+      <div>
+        <h3>
+          {{ settings.translations().settings.primaryColor }}
+        </h3>
+
+        <small>{{ settings.primaryColor() }}</small>
+      </div>
+
+      <input
+        type="color"
+        [value]="settings.primaryColor()"
+        (input)="settings.primaryColor.set($any($event.target).value)"
+      />
+    </div>
+
+    <div class="color-setting">
+      <div>
+        <h3>
+          {{ settings.translations().settings.secondaryColor }}
+        </h3>
+
+        <small>{{ settings.secondaryColor() }}</small>
+      </div>
+
+      <input
+        type="color"
+        [value]="settings.secondaryColor()"
+        (input)="settings.secondaryColor.set($any($event.target).value)"
+      />
+    </div>
+
+        <div class="color-setting">
+      <div>
+        <h3>
+          {{ settings.translations().settings.backgroundColor }}
+        </h3>
+
+        <small>{{ settings.backgroundColor() }}</small>
+      </div>
+
+      <input
+        type="color"
+        [value]="settings.backgroundColor()"
+        (input)="settings.backgroundColor.set($any($event.target).value)"
+      />
+    </div>
+  </div>
+</section>
