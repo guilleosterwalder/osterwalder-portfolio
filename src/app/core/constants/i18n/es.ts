@@ -1,9 +1,9 @@
 export const es = {
   home: 'Inicio',
-  projects: 'Proyectos',
   navbar: {
     home: 'Inicio',
     settings: 'Configuración',
+    projects: 'Proyectos',
   },
   footer: {
     copyright: 'Osterwalder Portfolio'
@@ -33,5 +33,9 @@ export const es = {
   },
   experience: {
     title: "Experiencia"
+  },
+  projects: {
+    title: "Proyectos",
+    description: "Aplicaciones basadas en casos de uso reales que demuestran arquitectura de interfaces, visualización de datos, integración de inteligencia artificial y desarrollo de soluciones empresariales."
   }
 };

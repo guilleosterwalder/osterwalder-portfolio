@@ -1,9 +1,9 @@
 export const en = {
   home: 'Home',
-  projects: 'Projects',
   navbar: {
     home: 'Home',
     settings: 'Settings',
+    projects: 'Projects',
   },
   footer: {
     copyright: 'Osterwalder Portfolio'
@@ -33,6 +33,10 @@ export const en = {
   },
   experience: {
     title: "Experience"
+  },
+  projects: {
+    title: "Projects",
+    description: "Real-world inspired applications showcasing frontend architecture, data visualization, AI integrations and enterprise development."
   }
 
 };
