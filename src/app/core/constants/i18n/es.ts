@@ -36,6 +36,14 @@ export const es = {
   },
   projects: {
     title: "Proyectos",
-    description: "Aplicaciones basadas en casos de uso reales que demuestran arquitectura de interfaces, visualización de datos, integración de inteligencia artificial y desarrollo de soluciones empresariales."
+    description: "Aplicaciones basadas en casos de uso reales que demuestran arquitectura de interfaces, visualización de datos, integración de inteligencia artificial y desarrollo de soluciones empresariales.",
+    medicalResearchProject: {
+      status: "Estado:",
+      author: "Author:",
+      lastReview: "Ultima Revisión:",
+      edit: "Editar",
+      uploadPDF: "Subir PDF",
+      exportPDF: "Exportar PDF",
+    }
   }
 };

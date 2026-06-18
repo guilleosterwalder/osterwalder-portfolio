@@ -36,7 +36,15 @@ export const en = {
   },
   projects: {
     title: "Projects",
-    description: "Real-world inspired applications showcasing frontend architecture, data visualization, AI integrations and enterprise development."
+    description: "Real-world inspired applications showcasing frontend architecture, data visualization, AI integrations and enterprise development.",
+    medicalResearchProject: {
+      status: "Status:",
+      author: "Author:",
+      lastReview: "Last Review:",
+      edit: "Edit",
+      uploadPDF: "Upload PDF",
+      exportPDF: "Export PDF",
+    }
   }
 
 };

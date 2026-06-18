@@ -1,0 +1,122 @@
+<section class="project-container">
+  <span class="project-tag">
+    Document Management
+  </span>
+  <h2>
+    {{ project.title }}
+  </h2>
+  <p class="project-description">
+    {{ project.description }}
+  </p>
+
+  <div class="technologies">
+    @for (
+      technology of project.technologies;
+      track technology
+    ) {
+      <span class="technology-badge">
+        {{ technology }}
+      </span>
+    }
+  </div>
+
+  <div class="metrics-grid">  
+    <div class="metric-card">  
+      <span>
+        {{ settings.translations().projects.medicalResearchProject.status }}
+      </span>
+  
+      <strong>
+        {{ status() }}
+      </strong>  
+    </div>
+  
+    <div class="metric-card">  
+      <span>
+        {{ settings.translations().projects.medicalResearchProject.author }}
+      </span>
+
+      <strong>
+        Guillermo
+      </strong>  
+    </div>
+  
+    <div class="metric-card">  
+      <span>
+        {{ settings.translations().projects.medicalResearchProject.lastReview }}
+      </span>
+  
+      <strong>
+        Jun 2026
+      </strong>
+  
+    </div>  
+  </div>
+
+  <div class="document-grid">
+    <div class="document-container">    
+      @if (!isEditing()) {
+    
+        <div
+          #documentPreview
+          class="document-preview"
+          [innerHTML]="documentContent()"
+        >
+        </div>    
+      }
+    
+      @else {
+    
+        <div class="editor-container">
+        
+          <ngx-editor-menu
+            [editor]="editor">
+          </ngx-editor-menu>
+        
+          <ngx-editor
+            [editor]="editor"
+            [ngModel]="documentContent()"
+            (ngModelChange)="
+              documentContent.set($event)
+            ">
+          </ngx-editor>
+        
+          <button
+            class="action-button primary"
+            (click)="save()">
+            Save
+          </button>
+        
+        </div>    
+      }    
+    </div>
+  </div>
+  
+
+  <div class="actions">
+    <button (click)="isEditing.set(true)" class="action-button primary">
+      <span class="material-icons">edit</span>
+      {{ settings.translations().projects.medicalResearchProject.edit }}
+    </button>
+
+    <input
+      #pdfInput
+      type="file"
+      accept=".pdf"
+      (change)="uploadPdf($event)"
+      hidden
+    />
+
+    <button class="action-button primary"  (click)="pdfInput.click()" >
+      <span class="material-icons">upload_file</span>
+      {{ settings.translations().projects.medicalResearchProject.uploadPDF }}
+    </button>
+
+    <button (click)="exportPdf()" class="action-button primary">
+      <span class="material-icons">picture_as_pdf</span>
+      {{ settings.translations().projects.medicalResearchProject.exportPDF }}
+    </button>
+
+  </div>
+
+</section>

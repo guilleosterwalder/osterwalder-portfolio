@@ -1,0 +1,152 @@
+.project-container {
+  padding: 2rem;
+  border-radius: 12px;
+  background-color:
+    color-mix(
+      in srgb,
+      var(--primary-color) 5%,
+      white 95%
+    );
+  border: 1px solid
+    color-mix(
+      in srgb,
+      var(--primary-color) 15%,
+      transparent
+    );
+}
+
+.project-container h2 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.project-description {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.document-header {
+  display: flex;
+  gap: 2rem;
+  margin: 1.5rem 0;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.action-button {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color:
+    color-mix(
+      in srgb,
+      var(--primary-color) 10%,
+      white 90%
+    );
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+}
+
+.action-button .material-icons {
+  font-size: 18px;
+}
+
+.action-button.primary {
+  background-color:
+    var(--primary-color);
+  color: white;
+}
+
+.document-preview {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  min-height: 250px;
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-break: break-word;
+  margin: 0 auto;
+  box-shadow:
+    0 4px 16px rgba(0,0,0,.08);
+  line-height: 1.8;
+}
+
+.editor-container {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow:
+    0 4px 16px rgba(0,0,0,.08);
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.technology-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background-color:
+    color-mix(
+      in srgb,
+      var(--primary-color) 15%,
+      white 85%
+    );
+  color: var(--primary-color);
+}
+
+.project-container {
+  margin-top: 20px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.project-container:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.1);
+}
+
+.project-tag {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background-color:
+    color-mix(
+      in srgb,
+      var(--primary-color) 15%,
+      white 85%
+    );
+  color: var(--primary-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.chart-container {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.05);
+}
