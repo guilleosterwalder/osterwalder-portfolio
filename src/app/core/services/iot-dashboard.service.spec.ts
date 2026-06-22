@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { IotDashboardServiceTs } from './iot-dashboard.service.ts';
+import { IotDashboardService } from './iot-dashboard.service.js';
 
 describe('IotDashboardServiceTs', () => {
-  let service: IotDashboardServiceTs;
+  let service: IotDashboardService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(IotDashboardServiceTs);
+    service = TestBed.inject(IotDashboardService);
   });
 
   it('should be created', () => {

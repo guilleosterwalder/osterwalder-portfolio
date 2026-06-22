@@ -3,7 +3,7 @@ import { iotProjectData } from '../../../../core/data/projects/iot-project.data'
 import { iotDashboardData } from '../../../../core/data/projects/iot-dashboard.data';
 import * as Highcharts from 'highcharts';
 import { HighchartsChartComponent } from 'highcharts-angular';
-import { IotDashboardService } from '../../../../core/services/iot-dashboard.service.ts';
+import { IotDashboardService } from '../../../../core/services/iot-dashboard.service';
 
 @Component({
   selector: 'app-iot-project',

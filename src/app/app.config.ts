@@ -10,7 +10,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideHttpClient(),
     provideHighcharts({
-      instance: () => import('highcharts'),
-    }),
+  instance: () => import('highcharts').then(m => m.default)
+})
   ],
 };
