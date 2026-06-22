@@ -65,12 +65,12 @@ export class ChatAssistant {
     ]);
   }
 
-  catch {
+  catch (error) {
     this.messages.update(messages => [
       ...messages,
       {
         sender: 'assistant',
-        text: 'Error contacting Gemini.',
+        text: `Error: ${JSON.stringify(error)}`,
       },
     ]);
   }

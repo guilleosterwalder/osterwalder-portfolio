@@ -11,7 +11,7 @@ exports.handler = async (event) => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          model: 'nvidia/nemotron-3-ultra-550b-a55b:free',
+          model: 'openrouter/free',
           messages: [
             {
               role: 'system',
@@ -30,15 +30,16 @@ exports.handler = async (event) => {
     const data = await response.json();
 
     return {
-      statusCode: response.status,
+      statusCode: 200,
       body: JSON.stringify(data),
     };
-  } catch (error) {
-    return {
-      statusCode: 500,
-      body: JSON.stringify({
-        error: error.message,
-      }),
-    };
-  }
+    } catch (error) {
+      return {
+        statusCode: 500,
+        body: JSON.stringify({
+          error: String(error),
+          stack: error?.stack,
+        }),
+      };
+    }
 };

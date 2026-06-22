@@ -44,3 +44,9 @@ __screenshots__/
 Thumbs.db
 
 src/environments/environment.local.ts
+.env
+*.log
+deno.lock
+
+# Local Netlify folder
+.netlify
